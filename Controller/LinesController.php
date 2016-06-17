@@ -11,7 +11,7 @@ class LinesController extends AppController {
     public function beforeFilter() {
         parent::beforeFilter();
         if (isset($this->Auth)) {
-            $this->Auth->allow('index', 'view');
+            $this->Auth->allow('index', 'view', 'json');
         }
     }
 
@@ -27,6 +27,18 @@ class LinesController extends AppController {
             $this->Session->setFlash(__('Please do following links in the page', true));
             $this->redirect(array('action' => 'index'));
         }
+    }
+    
+    public function json($id = null) {
+        if(!empty($id)) {
+            $data = $this->Line->read(null, $id);
+        }
+        if(!empty($data)) {
+            header('Content-Type: application/json');
+            header('Access-Control-Allow-Origin: *');
+            echo $data['Line']['json'];
+        }
+        exit();
     }
 
     function admin_index() {

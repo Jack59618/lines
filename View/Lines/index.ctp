@@ -43,6 +43,7 @@
                     <td>
                         <div class="btn-group">
                             <?php echo $this->Html->link(__('View', true), array('action' => 'view', $item['Line']['id']), array('class' => 'btn btn-default')); ?>
+                            <?php echo $this->Html->link(__('Json', true), array('action' => 'json', $item['Line']['id'], 'admin' => false), array('class' => 'btn btn-default', 'target' => '_blank')); ?>
                         </div>
                     </td>
                 </tr>

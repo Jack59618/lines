@@ -47,6 +47,7 @@ if (!isset($url)) {
                         <div class="btn-group">
                             <?php echo $this->Html->link(__('View', true), array('action' => 'view', $item['Line']['id']), array('class' => 'btn btn-default')); ?>
                             <?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $item['Line']['id']), array('class' => 'btn btn-default')); ?>
+                            <?php echo $this->Html->link(__('Json', true), array('action' => 'json', $item['Line']['id'], 'admin' => false), array('class' => 'btn btn-default', 'target' => '_blank')); ?>
                             <?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $item['Line']['id']), array('class' => 'btn btn-default'), __('Delete the item, sure?', true)); ?>
                         </div>
                     </td>
