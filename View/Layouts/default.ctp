@@ -58,7 +58,6 @@
                         ), 'http://www.cakephp.org/', array('target' => '_blank', 'escape' => false)
                 );
                 ?>
-                & <?php echo $this->Html->link('Just This Computer Studio', 'http://olc.tw/', array('target' => '_blank')); ?>
             </div>
         </div>
         <?php
