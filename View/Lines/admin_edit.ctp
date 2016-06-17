@@ -82,6 +82,10 @@
     L.geoJson(JSON.parse($('#LineJson').val()), {
         onEachFeature: function (feature, layer) {
             editableLayers.addLayer(layer);
+
         }
     });
+    setTimeout(function () {
+        map.fitBounds(editableLayers.getBounds());
+    }, 500);
 </script>
