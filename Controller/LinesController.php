@@ -8,6 +8,13 @@ class LinesController extends AppController {
     public $paginate = array();
     public $helpers = array();
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        if (isset($this->Auth)) {
+            $this->Auth->allow('index', 'view');
+        }
+    }
+
     function index() {
         $this->paginate['Line'] = array(
             'limit' => 20,
