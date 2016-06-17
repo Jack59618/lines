@@ -5,7 +5,12 @@
         <title>
             Lines::
             <?php echo $title_for_layout; ?>
-        </title><?php
+        </title>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+        <?php
         echo $this->Html->meta('icon');
         echo $this->Html->css('jquery-ui');
         echo $this->Html->css('bootstrap');
@@ -14,6 +19,7 @@
         echo $this->Html->script('jquery-ui');
         echo $this->Html->script('bootstrap.min');
         echo $this->Html->script('olc');
+        echo $this->Html->script('nlsc');
         echo $scripts_for_layout;
         ?>
     </head>
