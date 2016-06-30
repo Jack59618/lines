@@ -1,5 +1,6 @@
 <div id="LinesAdminAdd">
     <?php echo $this->Form->create('Line', array('type' => 'file')); ?>
+    <input type="submit" class="btn btn-primary pull-right" value="儲存" />
     <div class="Lines form">
         <?php
         echo $this->Form->input('Line.title', array(
@@ -12,7 +13,7 @@
         <div id="map" style="width: 100%; height: 600px;"></div>
     </div>
     <?php
-    echo $this->Form->end(__('Submit', true));
+    echo $this->Form->end();
     ?>
 </div>
 <?php
