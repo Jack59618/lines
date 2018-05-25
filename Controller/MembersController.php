@@ -55,6 +55,8 @@ class MembersController extends AppController {
                         $this->Acl->deny('everyone', 'app');
                         $this->Acl->allow('Group1', 'app');
                     }
+                    $this->Acl->Aco->recover();
+                    $this->Acl->Aro->recover();
                     $this->Session->setFlash(__('The administrator created, please login with the id/password you entered.', true));
                     $this->redirect('/members/login');
                 } else {
