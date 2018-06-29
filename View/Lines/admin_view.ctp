@@ -4,6 +4,16 @@
         echo $this->data['Line']['title'];
         ?>&nbsp;
     </div>
+    <div class="col-md-2">Date Begin</div>
+    <div class="col-md-9">&nbsp;<?php
+        echo $this->data['Line']['date_begin'];
+        ?>&nbsp;
+    </div>
+    <div class="col-md-2">Date End</div>
+    <div class="col-md-9">&nbsp;<?php
+        echo $this->data['Line']['date_end'];
+        ?>&nbsp;
+    </div>
     <div class="col-md-2">Created</div>
     <div class="col-md-9">&nbsp;<?php
         echo $this->data['Line']['created'];

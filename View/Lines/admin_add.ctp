@@ -8,6 +8,27 @@
             'div' => 'form-group',
             'class' => 'form-control',
         ));
+	echo $this->Form->input('Line.date_begin', array(
+	    'label' => 'Date begin',
+            'div' => 'form-group',
+            'class' => 'form-control',
+	));
+	echo $this->Form->input('Line.date_end', array(
+	    'label' => 'Date end',
+            'div' => 'form-group',
+            'class' => 'form-control',
+	));
+	echo $this->Form->input('Line.author', array(
+	    'label' => 'Author',
+            'div' => 'form-group',
+            'class' => 'form-control',
+            'text' => 'input',
+	));
+	/*echo $this->Form->input('Line.date_end2', array(
+	    'label' => 'Date end2',
+            'div' => 'form-group',
+            'class' => 'form-control',
+	));*/
         echo $this->Form->hidden('Line.json');
         ?>
         <div id="map" style="width: 100%; height: 600px;"></div>

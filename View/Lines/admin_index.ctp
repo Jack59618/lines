@@ -7,6 +7,7 @@ if (!isset($url)) {
     <h2><?php echo __('Lines', true); ?></h2>
     <div class="btn-group">
         <?php echo $this->Html->link(__('Add', true), array('action' => 'add'), array('class' => 'btn btn-default')); ?>
+        <?php echo $this->Html->link(__('SearchTime', true), array('prefix'=>'admin','controller' => 'lines','action' => 'searchtime'), array('class' => 'btn btn-default')); ?>
     </div>
     <div><?php
         echo $this->Paginator->counter(array(
